@@ -5,7 +5,6 @@
 #include<utility>
 #include<limits>
 
-
 using namespace std;
 
 const int intM=numeric_limits<int>::max();
@@ -19,14 +18,14 @@ vector<vector<int>> BFS(int H,int W,vector<string> S,int sh,int sw){
   visited[sh][sw]=0;
   q.push({0,sh,sw});
   while(!q.empty()){
-    auto [c,nowH,nowW]=q.front();
+    auto [w,nowH,nowW]=q.front();
     q.pop();
     for(int i=0;i<4;i++){
       int nextH=nowH+dy[i];
       int nextW=nowW+dx[i];
       if(0<=nextH&&nextH<H&&0<=nextW&&nextW<W&&S[nextH][nextW]!='#'&&visited[nextH][nextW]==intM){
-        visited[nextH][nextW]=c;
-        q.push({c+1,nextH,nextW});
+        visited[nextH][nextW]=w+1;
+        q.push({w+1,nextH,nextW});
       }
     }
   }
