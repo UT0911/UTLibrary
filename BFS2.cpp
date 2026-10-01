@@ -18,14 +18,14 @@ vector<vector<int>> BFS2(int H,int W,vector<string> h,vector<string> v,int sh,in
   visited[sh][sw]=0;
   q.push({0,sh,sw});
   while(!q.empty()){
-    auto [c,nowH,nowW]=q.front();
+    auto [w,nowH,nowW]=q.front();
     q.pop();
     for(int i=0;i<4;i++){
       int nextH=nowH+dy[i];
       int nextW=nowW+dx[i];
       if(0<=nextH&&nextH<H&&0<=nextW&&nextW<W&&((i%2==0&&h[min(nowH, nextH)][nextW]=='0')||(i%2==1&&v[nextH][min(nowW, nextW)]=='0'))&&visited[nextH][nextW]==intM){
-        visited[nextH][nextW]=c+1;
-        q.push({c+1,nextH,nextW});
+        visited[nextH][nextW]=w+1;
+        q.push({w+1,nextH,nextW});
       }
     }
   }
