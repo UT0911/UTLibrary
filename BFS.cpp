@@ -6,11 +6,13 @@
 
 using namespace std;
 
+const int intM=numeric_limits<int>::max();
+
 vector<int> dx={0,1,0,-1};
 vector<int> dy={-1,0,1,0};
 
 vector<vector<int>> BFS(int H,int W,vector<string> S,int sh,int sw){
-  vector<vector<int>> visited(H,vector<int> (W,-100));
+  vector<vector<int>> visited(H,vector<int> (W,intM));
   queue<tuple<int,int,int>> q;
   q.push({0,sh,sw});
   while(!q.empty()){
@@ -20,7 +22,7 @@ vector<vector<int>> BFS(int H,int W,vector<string> S,int sh,int sw){
     for(int i=0;i<4;i++){
       int nextH=h+dy[i];
       int nextW=w+dx[i];
-      if(0<=nextH&&nextH<H&&0<=nextW&&nextW<W&&S[nextH][nextW]!='#'&&visited[nextH][nextW]==-100){
+      if(0<=nextH&&nextH<H&&0<=nextW&&nextW<W&&S[nextH][nextW]!='#'&&visited[nextH][nextW]==intM){
         q.push({c+1,nextH,nextW});
       }
     }
