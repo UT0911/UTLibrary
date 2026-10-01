@@ -16,15 +16,16 @@ vector<int> dy={-1,0,1,0};
 vector<vector<int>> BFS(int H,int W,vector<string> S,int sh,int sw){
   vector<vector<int>> visited(H,vector<int> (W,intM));
   queue<tuple<int,int,int>> q;
+  visited[sh][sw]=0;
   q.push({0,sh,sw});
   while(!q.empty()){
     auto [c,nowH,nowW]=q.front();
     q.pop();
-    visited[nowH][nowW]=c;
     for(int i=0;i<4;i++){
       int nextH=nowH+dy[i];
       int nextW=nowW+dx[i];
       if(0<=nextH&&nextH<H&&0<=nextW&&nextW<W&&S[nextH][nextW]!='#'&&visited[nextH][nextW]==intM){
+        visited[nextH][nextW]=c;
         q.push({c+1,nextH,nextW});
       }
     }
