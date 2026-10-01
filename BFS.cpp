@@ -16,12 +16,12 @@ vector<vector<int>> BFS(int H,int W,vector<string> S,int sh,int sw){
   queue<tuple<int,int,int>> q;
   q.push({0,sh,sw});
   while(!q.empty()){
-    auto [c,h,w]=q.front();
+    auto [c,nowH,nowW]=q.front();
     q.pop();
-    visited[h][w]=c;
+    visited[nowH][nowW]=c;
     for(int i=0;i<4;i++){
-      int nextH=h+dy[i];
-      int nextW=w+dx[i];
+      int nextH=nowH+dy[i];
+      int nextW=nowW+dx[i];
       if(0<=nextH&&nextH<H&&0<=nextW&&nextW<W&&S[nextH][nextW]!='#'&&visited[nextH][nextW]==intM){
         q.push({c+1,nextH,nextW});
       }
