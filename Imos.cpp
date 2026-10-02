@@ -19,14 +19,14 @@ vector<ll> Imos(int N,int M,vector<int> L,vector<int> R,vector<ll> W){
 }
 
 int main(){
-    int N,M;
-    cin >> N >> M;
-    vector<int> L(M);
-    vector<int> R(M);
-    vector<ll> W(M);
-    for(int i=0;i<M;i++)cin >> L[i] >> R[i] >> W[i];
+    int N,K;
+    cin >> N >> K;
+    vector<int> L(K);
+    vector<int> R(K);
+    vector<ll> W(K);
+    for(int i=0;i<K;i++)cin >> L[i] >> R[i] >> W[i];
 
-    vector<ll> A=Imos(N,M,L,R,W);
+    vector<ll> A=Imos(N,K,L,R,W);
     for(int i=0;i<=N;i++)cout << A[i] << " ";
     cout << endl;
 
