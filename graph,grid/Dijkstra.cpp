@@ -18,9 +18,9 @@ vector<ll> Dijkstra(int N,vector<vector<pair<ll,int>>> edge,int s){
     while(!q.empty()){
         auto [w,now]=q.top();
         q.pop();
-        for(int i=0;i<edge[now].size();i++){
-            int next=edge[now][i].second;
-            int nextW=w+edge[now][i].first;
+        for(pair<ll,int> nextEdge:edge[now]){
+            int next=nextEdge.second;
+            int nextW=w+nextEdge.first;
             if(visited[next]>nextW){
                 visited[next]=nextW;
                 q.push({nextW,next});
