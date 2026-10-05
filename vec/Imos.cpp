@@ -4,8 +4,10 @@
 using namespace std;
 
 using ll = long long;
-vector<ll> Imos(int N,int M,vector<int> L,vector<int> R,vector<ll> W){
-    vector<ll> A(N+2,0);
+
+template<typename T,typename U>
+vector<T> Imos(U N,U M,vector<U> L,vector<U> R,vector<T> W){
+    vector<T> A(N+2,0);
     for(int i=0;i<M;i++){
         A[L[i]]+=W[i];
         A[R[i]+1]-=W[i];
@@ -17,6 +19,7 @@ vector<ll> Imos(int N,int M,vector<int> L,vector<int> R,vector<ll> W){
 
     return A;
 }
+
 
 int main(){
     int N,K;
