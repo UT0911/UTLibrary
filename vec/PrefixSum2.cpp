@@ -3,8 +3,9 @@
 
 using namespace std;
 
-vector<vector<int>> PrefixSum2(int N,int M,vector<vector<int>> A){
-    vector<vector<int>> ruiseki(N+1,vector<int> (M+1,0));
+template<typename T,typename U>
+vector<vector<T>> PrefixSum2(U N,U M,vector<vector<T>> A){
+    vector<vector<T>> ruiseki(N+1,vector<T> (M+1,0));
     for(int i=1;i<=N;i++){
         for(int j=1;j<=M;j++){
             ruiseki[i][j]=A[i][j];
@@ -25,6 +26,7 @@ vector<vector<int>> PrefixSum2(int N,int M,vector<vector<int>> A){
 
     return ruiseki;
 }
+
 
 int main(){
     int N,M;
