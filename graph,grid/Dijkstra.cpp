@@ -11,23 +11,23 @@ using ll = long long;
 const ll llM=numeric_limits<ll>::max();
 
 vector<ll> Dijkstra(int N,vector<vector<pair<ll,int>>> edge,int s){
-    vector<ll> visited(N+1,llM);
+    vector<ll> dist(N+1,llM);
     priority_queue<pair<ll,int>, vector<pair<ll,int>>, greater<pair<ll,int>>> q;
-    visited[s]=0LL;
+    dist[s]=0LL;
     q.push({0LL,s});
     while(!q.empty()){
         auto [w,now]=q.top();
         q.pop();
         for(pair<ll,int> nextEdge:edge[now]){
             int next=nextEdge.second;
-            int nextW=w+nextEdge.first;
-            if(visited[next]>nextW){
-                visited[next]=nextW;
+            ll nextW=w+nextEdge.first;
+            if(dist[next]>nextW){
+                dist[next]=nextW;
                 q.push({nextW,next});
             }
         }
     }
-    return visited;
+    return dist;
 }
 
 int main(){
@@ -43,9 +43,9 @@ int main(){
         edge[v[i]].push_back({w[i],u[i]});
     }
 
-    vector<ll> visited=Dijkstra(N,edge,1);
+    vector<ll> dist=Dijkstra(N,edge,1);
 
-    for(int i=1;i<=N;i++)cout << visited[i] << " ";
+    for(int i=1;i<=N;i++)cout << dist[i] << " ";
     cout << endl;
 
 
