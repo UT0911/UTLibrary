@@ -4,7 +4,7 @@
 using namespace std;
 
 template<typename T,typename U>
-vector<vector<T>> PrefixSum2(U N,U M,vector<vector<T>> A){
+vector<vector<T>> PrefixSum2(U N,U M,const vector<vector<T>> &A){
     vector<vector<T>> ruiseki(N+1,vector<T> (M+1,0));
     for(int i=1;i<=N;i++){
         for(int j=1;j<=M;j++){

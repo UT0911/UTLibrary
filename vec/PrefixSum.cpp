@@ -4,7 +4,7 @@
 using namespace std;
 
 template<typename T,typename U>
-vector<T> PrefixSum(U N,vector<T> A){
+vector<T> PrefixSum(U N,const vector<T> &A){
     vector<T> ruiseki(N+1,0);
     for(int i=1;i<=N;i++){
         ruiseki[i]=ruiseki[i-1]+A[i];

@@ -12,7 +12,7 @@ const int intM=numeric_limits<int>::max();
 vector<int> dx={0,1,0,-1};
 vector<int> dy={-1,0,1,0};
 
-vector<vector<int>> BFS(int H,int W,vector<string> S,int sh,int sw){
+vector<vector<int>> BFS(int H,int W,const vector<string> &S,int sh,int sw){
   vector<vector<int>> visited(H,vector<int> (W,intM));
   queue<tuple<int,int,int>> q;
   visited[sh][sw]=0;

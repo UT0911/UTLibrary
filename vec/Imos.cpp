@@ -6,7 +6,7 @@ using namespace std;
 using ll = long long;
 
 template<typename T,typename U>
-vector<T> Imos(U N,U M,vector<U> L,vector<U> R,vector<T> W){
+vector<T> Imos(U N,U M,const vector<U> &L,const vector<U> &R,const vector<T> &W){
     vector<T> A(N+2,0);
     for(int i=0;i<M;i++){
         A[L[i]]+=W[i];
