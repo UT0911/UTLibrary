@@ -10,7 +10,7 @@ using ll = long long;
 
 const ll llM=numeric_limits<ll>::max();
 
-vector<ll> Dijkstra(int N,vector<vector<pair<ll,int>>> edge,int s){
+vector<ll> Dijkstra(int N,const vector<vector<pair<ll,int>>> &edge,int s){
     vector<ll> dist(N+1,llM);
     priority_queue<pair<ll,int>, vector<pair<ll,int>>, greater<pair<ll,int>>> q;
     dist[s]=0LL;
@@ -18,6 +18,7 @@ vector<ll> Dijkstra(int N,vector<vector<pair<ll,int>>> edge,int s){
     while(!q.empty()){
         auto [w,now]=q.top();
         q.pop();
+        if(w!=dist[now])continue;
         for(pair<ll,int> nextEdge:edge[now]){
             int next=nextEdge.second;
             ll nextW=w+nextEdge.first;
