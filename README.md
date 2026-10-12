@@ -56,9 +56,11 @@
 
 頂点番号は $1$ ～ $N$ です
 
+`Graph` 型は `vector<vector<pair<ll,int>>>` です
+
 #### 入力
 * 頂点数を表す `int` 型変数 $N$
-* 辺情報を表す `pair<ll,int>` 型二次元配列 $edge$
+* 辺情報を表す `Graph` 型配列 $edge$
 * 開始頂点番号を表す `int` 型変数 $s$
 
 #### 出力(返り値)
