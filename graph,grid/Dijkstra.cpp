@@ -7,10 +7,11 @@
 using namespace std;
 
 using ll = long long;
+using Graph = vector<vector<pair<ll,int>>>;
 
 const ll llM=numeric_limits<ll>::max();
 
-vector<ll> Dijkstra(int N,const vector<vector<pair<ll,int>>> &edge,int s){
+vector<ll> Dijkstra(int N,const Graph &edge,int s){
     vector<ll> dist(N+1,llM);
     priority_queue<pair<ll,int>, vector<pair<ll,int>>, greater<pair<ll,int>>> q;
     dist[s]=0LL;
@@ -37,7 +38,7 @@ int main(){
     vector<int> u(M);
     vector<int> v(M);
     vector<int> w(M);
-    vector<vector<pair<ll,int>>> edge(N+1);
+    Graph edge(N+1);
     for(int i=0;i<M;i++){
         cin >> u[i] >> v[i] >> w[i];
         edge[u[i]].push_back({w[i],v[i]});
