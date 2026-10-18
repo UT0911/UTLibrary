@@ -8,7 +8,7 @@ namespace UTLib
 {
 
     template <typename T, typename U>
-    vector<T> PrefixSum(U N, const vector<T> &A)
+    vector<T> PrefixSum(const U N, const vector<T> &A)
     {
         vector<T> ruiseki(N + 1, 0);
         for (int i = 1; i <= N; i++)
@@ -19,7 +19,7 @@ namespace UTLib
     }
 
     template <typename T, typename U>
-    vector<vector<T>> PrefixSum2(U N, U M, const vector<vector<T>> &A)
+    vector<vector<T>> PrefixSum2(const U N, const U M, const vector<vector<T>> &A)
     {
         vector<vector<T>> ruiseki(N + 1, vector<T>(M + 1, 0));
         for (int i = 1; i <= N; i++)

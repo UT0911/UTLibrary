@@ -16,12 +16,12 @@ const ll llM = numeric_limits<ll>::max();
 namespace UTLib
 {
 
-    void addEdge(Graph &g, int u, int v, ll w)
+    void addEdge(Graph &g, const int u, const int v, const ll w)
     {
         g[u].push_back({w, v});
     }
 
-    vector<ll> Dijkstra(int N, const Graph &g, int s)
+    vector<ll> Dijkstra(const int N, const Graph &g, const int s)
     {
         vector<ll> dist(N + 1, llM);
         priority_queue<vertex, vector<vertex>, greater<vertex>> q;

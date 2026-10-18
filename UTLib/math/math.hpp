@@ -6,7 +6,7 @@ using namespace std;
 using ll = long long;
 namespace UTLib
 {
-    int ketawa(int x)
+    int ketawa(const int x)
     {
         string S = to_string(x);
         int sum = 0;
@@ -17,7 +17,7 @@ namespace UTLib
         return sum;
     }
 
-    bool IsPrime(ll x)
+    bool IsPrime(const ll x)
     {
         if (x < 2)
             return false;
@@ -29,7 +29,7 @@ namespace UTLib
         return true;
     }
 
-    ll Power(ll a, ll b, ll m)
+    ll Power(const ll a, const ll b, const ll m)
     {
         ll ans = 1, p = a;
         for (ll i = 0; i < 60; i++)
@@ -43,7 +43,7 @@ namespace UTLib
         return ans;
     }
 
-    ll ncr(ll n, ll r, ll m)
+    ll ncr(const ll n, const ll r, const ll m)
     {
         if (r < 0 || r > n)
             return 0;

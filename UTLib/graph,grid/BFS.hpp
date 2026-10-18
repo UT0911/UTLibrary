@@ -17,7 +17,7 @@ vector<int> dy = {-1, 0, 1, 0};
 namespace UTLib
 {
 
-    vector<vector<int>> BFS(int H, int W, const vector<string> &S, int sh, int sw)
+    vector<vector<int>> BFS(const int H, const int W, const vector<string> &S, const int sh, const int sw)
     {
         vector<vector<int>> visited(H, vector<int>(W, intM));
         queue<tuple<int, int, int>> q;
@@ -42,7 +42,7 @@ namespace UTLib
         return visited;
     }
 
-    vector<vector<int>> BFS2(int H, int W, const vector<string> &h, const vector<string> &v, int sh, int sw)
+    vector<vector<int>> BFS2(const int H, const int W, const vector<string> &h, const vector<string> &v, const int sh, const int sw)
     {
         vector<vector<int>> visited(H, vector<int>(W, intM));
         queue<tuple<int, int, int>> q;

@@ -8,7 +8,7 @@ namespace UTLib
 {
 
     template <typename T, typename U>
-    vector<T> Imos(U N, U M, const vector<U> &L, const vector<U> &R, const vector<T> &W)
+    vector<T> Imos(const U N, const U M, const vector<U> &L, const vector<U> &R, const vector<T> &W)
     {
         vector<T> A(N + 2, 0);
         for (int i = 0; i < M; i++)
@@ -26,7 +26,7 @@ namespace UTLib
     }
 
     template <typename T, typename U>
-    vector<vector<T>> Imos2(U N, U M, U K, const vector<U> &r1, const vector<U> &c1, const vector<U> &r2, const vector<U> &c2, const vector<T> &W)
+    vector<vector<T>> Imos2(const U N, const U M, const U K, const vector<U> &r1, const vector<U> &c1, const vector<U> &r2, const vector<U> &c2, const vector<T> &W)
     {
         vector<vector<T>> A(N + 2, vector<T>(M + 2, 0));
         for (int i = 0; i < K; i++)
