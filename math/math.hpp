@@ -1,0 +1,64 @@
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+using ll = long long;
+namespace UTLib
+{
+    int ketawa(int x)
+    {
+        string S = to_string(x);
+        int sum = 0;
+        for (char c : S)
+        {
+            sum += (int)(c - '0');
+        }
+        return sum;
+    }
+
+    bool IsPrime(ll x)
+    {
+        if (x < 2)
+            return false;
+        for (ll i = 2; i <= sqrt(x); i++)
+        {
+            if (x % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    ll Power(ll a, ll b, ll m)
+    {
+        ll ans = 1, p = a;
+        for (ll i = 0; i < 60; i++)
+        {
+            if (b & (1LL << i))
+            {
+                ans = (ans * p) % m;
+            }
+            p = (p * p) % m;
+        }
+        return ans;
+    }
+
+    ll ncr(ll n, ll r, ll m)
+    {
+        if (r < 0 || r > n)
+            return 0;
+        if (r == 0 || r == n)
+            return 1;
+        ll bunshi = 1;
+        for (ll i = 1; i <= n; i++)
+            bunshi = (bunshi * i) % m;
+
+        ll bunbo = 1;
+        for (ll i = 1; i <= r; i++)
+            bunbo = (bunbo * i) % m;
+        for (ll i = 1; i <= n - r; i++)
+            bunbo = (bunbo * i) % m;
+
+        return (bunshi * Power(bunbo, m - 2, m)) % m;
+    }
+}
