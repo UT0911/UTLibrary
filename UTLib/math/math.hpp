@@ -29,21 +29,22 @@ namespace UTLib
         return true;
     }
 
-    ll Power(const ll a, const ll b, const ll m)
+    ll Power(ll a, ll b, const ll m)
     {
-        ll ans = 1, p = a;
-        for (ll i = 0; i < 60; i++)
+        ll ans = 1;
+        a %= m;
+        while (b > 0)
         {
-            if (b & (1LL << i))
-            {
-                ans = (ans * p) % m;
-            }
-            p = (p * p) % m;
+            if (b & 1LL)
+                ans = ans * a % m;
+
+            a = a * a % m;
+            b >> 1;
         }
         return ans;
     }
 
-    ll ncr(const ll n, const ll r, const ll m)
+    ll Combination(const ll n, const ll r, const ll m)
     {
         if (r < 0 || r > n)
             return 0;
