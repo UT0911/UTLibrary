@@ -7,14 +7,52 @@
     <title>BFS</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <script defer type="text/javascript" src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
     <header><a href="../index.html" class="headerTitle">UTLibrary</a>
     </header>
     <h1>BFS</h1>
-    <p>編集中</p>
+    <a class="sourcecode" href="https://github.com/UT0911/UTLibrary/blob/main/UTLib/graph%2Cgrid/BFS.hpp">bfs.hpp</a>
+    <div>
+        <h2>BFS(文字列が各マスに対応している場合)</h2>
+        <p>盤面の大きさ \( H \times W \)、各マスが壁かどうかを表す文字列配列 \( S \) ( マス \( ( i , j ) \) が壁であれば \( S_{i,j} = \) <code>#</code>
+            )、始点
+            \((si,sj)\)
+            を与えると、始点から各マスまでの最短距離を求めることができます。
+        </p>
+
+        <h3>制約</h3>
+        <ul>
+            <li>\( H,W,si,sj \) はint型</li>
+            <li>\( S \) は長さ \( W \) の文字列を \( H \) 個格納した文字列配列</li>
+            <li>\( 0 \leq si \leq H-1 \)</li>
+            <li>\( 0 \leq sj \leq W-1 \)</li>
+        </ul>
+
+        <h3>計算量</h3>
+        <p>\( O(HW) \)</p>
+
+        <h3>仕様</h3>
+        <h4>入力</h4>
+        <ul>
+            <li>盤面の縦の長さ \( H \)</li>
+            <li>盤面の横の長さ \( W \)</li>
+            <li>盤面の各マスが壁かどうかを表した文字列配列 \( S \)</li>
+            <li>始点が上から何番目かを表す \( si \)</li>
+            <li>始点が左から何番目かを表す \( sj \)</li>
+        </ul>
+        <h4>出力(返り値)</h4>
+        <p>始点から各マスまでの最短距離を格納した \( H \times W \) の二次元配列</p>
+
+        <h4>注意</h4>
+        <ul>
+            <li>特になし</li>
+        </ul>
+    </div>
+
+
 </body>
 
 </html>
