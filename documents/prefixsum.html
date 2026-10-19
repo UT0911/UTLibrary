@@ -7,15 +7,68 @@
     <title>累積和</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <script defer type="text/javascript" src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
     <header><a href="../index.html" class="headerTitle">UTLibrary</a>
     </header>
     <h1>累積和</h1>
-    <p>編集中</p>
+    <a class="sourcecode" href="https://github.com/UT0911/UTLibrary/blob/main/UTLib/vec/PrefixSum.hpp">PrefixSum.hpp</a>
+    <div>
+        <h2>PrefixSum(一次元累積和)</h2>
+        <p>長さ \( N+1 \) の一次元配列 \( A \) に一次元累積和を適用します。</p>
 
+        <h3>制約</h3>
+        <ul>
+            <li>必須の制約は無し</li>
+        </ul>
+
+        <h3>計算量</h3>
+        <p>\( O(N) \)</p>
+
+        <h3>仕様</h3>
+        <h4>入力</h4>
+        <ul>
+            <li>一次元配列の長さ \( N \)</li>
+            <li>一次元累積和を適用したい一次元配列 \( A \)</li>
+        </ul>
+        <h4>出力(返り値)</h4>
+        <p>一次元累積和を適用した長さ \( N+1 \) の一次元配列</p>
+
+        <h4>注意</h4>
+        <ul>
+            <li>特になし</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>PrefixSum2(二次元累積和)</h2>
+        <p>縦の長さ \( N+1 \) 、横の長さ \( M+1 \) の二次元配列 \( A \) に二次元累積和を適用します。</p>
+
+        <h3>制約</h3>
+        <ul>
+            <li>必須の制約は無し</li>
+        </ul>
+
+        <h3>計算量</h3>
+        <p>\( O(N^2) \)</p>
+
+        <h3>仕様</h3>
+        <h4>入力</h4>
+        <ul>
+            <li>二次元配列の縦の長さ \( N \)</li>
+            <li>二次元配列の横の長さ \( M \)</li>
+            <li>二次元累積和を適用したい二次元配列 \( A \)</li>
+        </ul>
+        <h4>出力(返り値)</h4>
+        <p>二次元累積和を適用した縦の長さ \( N+1 \) 、横の長さ \( M \) の二次元配列</p>
+
+        <h4>注意</h4>
+        <ul>
+            <li>\( N \) 、 \( M \) は同じ型</li>
+        </ul>
+    </div>
 </body>
 
 </html>

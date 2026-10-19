@@ -7,13 +7,83 @@
     <title>imos法</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <script defer type="text/javascript" src="script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
     <header><a href="../index.html" class="headerTitle">UTLibrary</a>
     </header>
     <h1>imos法</h1>
-    <p>編集中</p>
+    <a class="sourcecode" href="https://github.com/UT0911/UTLibrary/blob/main/UTLib/vec/Imos.hpp">Imos.hpp</a>
+    <div>
+        <h2>Imos(一次元imos法)</h2>
+        <p>長さ \( N+2 \) の一次元配列に \( M \) 個の重み付き区間を適用します。</p>
+        <p>\( i ( 1 \leq i \leq M) \) 番目の区間は始点 \( L_i \) 、終点 \( R_i \) 、重み \( W_i \) です。</p>
+
+        <h3>制約</h3>
+        <ul>
+            <li>\( L_i \leq R_i \)</li>
+        </ul>
+
+        <h3>計算量</h3>
+        <p>\( O(N+M) \)</p>
+
+        <h3>仕様</h3>
+        <h4>入力</h4>
+        <ul>
+            <li>一次元配列の長さ \( N \)</li>
+            <li>区間の数 \( M \)</li>
+            <li>各区間の始点を格納する配列 \( L \)</li>
+            <li>各区間の終点を格納する配列 \( R \)</li>
+            <li>各区間の重みを格納する配列 \( W \)</li>
+        </ul>
+        <h4>出力(返り値)</h4>
+        <p>重み付き区間を適用した長さ \( N+2 \) の一次元配列</p>
+
+        <h4>注意</h4>
+        <ul>
+            <li>\( N \) 、\( M \) 、\( L \) 、\( R \) は同じ型</li>
+            <li>\( W \) と出力(返り値)は同じ型</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Imos2(二次元imos法)</h2>
+        <p>縦の長さ \( N \) 、横の長さ \( M \) の二次元配列に \( K \) 個の重み付き矩形区間を適用します。</p>
+        <p>\( i ( 1 \leq i \leq K) \) 番目の区間は始点 \( (r1_i , c1_i) \) 、終点 \( (r2_i , c2_i) \) 、重み \( W_i \) です。
+        </p>
+
+        <h3>制約</h3>
+        <ul>
+            <li>\( r1_i \leq r2_i \)</li>
+            <li>\( c1_i \leq c2_i \)</li>
+        </ul>
+
+        <h3>計算量</h3>
+        <p>\( O(NM+K) \)</p>
+
+        <h3>仕様</h3>
+        <h4>入力</h4>
+        <ul>
+            <li>二次元配列の縦の長さ \( N \)</li>
+            <li>二次元配列の横の長さ \( M \)</li>
+            <li>矩形区間の数 \( K \)</li>
+            <li>各矩形区間の始点が上から何番目かを格納する配列 \( r1 \)</li>
+            <li>各矩形区間の始点が左から何番目かを格納する配列 \( c1 \)</li>
+            <li>各矩形区間の終点が上から何番目かを格納する配列 \( r2 \)</li>
+            <li>各矩形区間の終点が左から何番目かを格納する配列 \( c2 \)</li>
+            <li>各区間の重みを格納する配列 \( W \)</li>
+        </ul>
+        <h4>出力(返り値)</h4>
+        <p>重み付き矩形区間を適用した縦の長さ \( N+2 \) 、横の長さ \( M+2 \)の二次元配列</p>
+
+        <h4>注意</h4>
+        <ul>
+            <li>\( N \) 、\( M \) 、\( K \) 、\( r1 \) 、\( c1 \) 、\( r2 \) 、\( c2 \) は同じ型</li>
+            <li>\( W \) の要素の型と出力(返り値)の要素の型は同じ型</li>
+        </ul>
+
+    </div>
 </body>
 
 </html>
