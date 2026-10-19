@@ -19,9 +19,9 @@ namespace UTLib
 
     vector<vector<int>> BFS(const int H, const int W, const vector<string> &S, const int sh, const int sw)
     {
-        vector<vector<int>> visited(H, vector<int>(W, intM));
+        vector<vector<int>> dist(H, vector<int>(W, intM));
         queue<tuple<int, int, int>> q;
-        visited[sh][sw] = 0;
+        dist[sh][sw] = 0;
         q.push({0, sh, sw});
         while (!q.empty())
         {
@@ -31,22 +31,22 @@ namespace UTLib
             {
                 int nextH = nowH + dy[i];
                 int nextW = nowW + dx[i];
-                if (0 <= nextH && nextH < H && 0 <= nextW && nextW < W && S[nextH][nextW] != '#' && visited[nextH][nextW] == intM)
+                if (0 <= nextH && nextH < H && 0 <= nextW && nextW < W && S[nextH][nextW] != '#' && dist[nextH][nextW] == intM)
                 {
-                    visited[nextH][nextW] = w + 1;
+                    dist[nextH][nextW] = w + 1;
                     q.push({w + 1, nextH, nextW});
                 }
             }
         }
 
-        return visited;
+        return dist;
     }
 
     vector<vector<int>> BFS2(const int H, const int W, const vector<string> &h, const vector<string> &v, const int sh, const int sw)
     {
-        vector<vector<int>> visited(H, vector<int>(W, intM));
+        vector<vector<int>> dist(H, vector<int>(W, intM));
         queue<tuple<int, int, int>> q;
-        visited[sh][sw] = 0;
+        dist[sh][sw] = 0;
         q.push({0, sh, sw});
         while (!q.empty())
         {
@@ -56,15 +56,15 @@ namespace UTLib
             {
                 int nextH = nowH + dy[i];
                 int nextW = nowW + dx[i];
-                if (0 <= nextH && nextH < H && 0 <= nextW && nextW < W && ((i % 2 == 0 && h[min(nowH, nextH)][nextW] == '0') || (i % 2 == 1 && v[nextH][min(nowW, nextW)] == '0')) && visited[nextH][nextW] == intM)
+                if (0 <= nextH && nextH < H && 0 <= nextW && nextW < W && ((i % 2 == 0 && h[min(nowH, nextH)][nextW] == '0') || (i % 2 == 1 && v[nextH][min(nowW, nextW)] == '0')) && dist[nextH][nextW] == intM)
                 {
-                    visited[nextH][nextW] = w + 1;
+                    dist[nextH][nextW] = w + 1;
                     q.push({w + 1, nextH, nextW});
                 }
             }
         }
 
-        return visited;
+        return dist;
     }
 
 }
