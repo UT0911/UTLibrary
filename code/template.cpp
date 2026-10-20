@@ -153,7 +153,7 @@ ll Power(ll a, ll b, const ll m)
             ans = ans * a % m;
 
         a = a * a % m;
-        b >> 1;
+        b >>= 1;
     }
     return ans;
 }
