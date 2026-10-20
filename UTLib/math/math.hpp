@@ -39,7 +39,7 @@ namespace UTLib
                 ans = ans * a % m;
 
             a = a * a % m;
-            b >> 1;
+            b >>= 1;
         }
         return ans;
     }
