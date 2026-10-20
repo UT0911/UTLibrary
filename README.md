@@ -11,7 +11,7 @@
     * [math](https://github.com/UT0911/UTLibrary/tree/main/UTLib/math)
         * [math.hpp](https://github.com/UT0911/UTLibrary/blob/main/UTLib/math/math.hpp)
     * [vec](https://github.com/UT0911/UTLibrary/tree/main/UTLib/vec)
-        * [Imos.hpp](https://github.com/UT0911/UTLibrary/blob/main/UTLib/graph%2Cgrid/Dijkstra.hpp)
+        * [Imos.hpp](https://github.com/UT0911/UTLibrary/blob/main/UTLib/graph%2Cgrid/Imos.hpp)
         * [PrefixSum.hpp](https://github.com/UT0911/UTLibrary/blob/main/UTLib/vec/PrefixSum.hpp)
 
 * [code](https://github.com/UT0911/UTLibrary/blob/main/UTLib/vec/PrefixSum.hpp)
