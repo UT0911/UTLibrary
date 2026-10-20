@@ -17,12 +17,12 @@ vector<int> dy = {-1, 0, 1, 0};
 namespace UTLib
 {
 
-    vector<vector<int>> BFS(const int H, const int W, const vector<string> &S, const int sh, const int sw)
+    vector<vector<int>> BFS(const int H, const int W, const vector<string> &S, const int si, const int sj)
     {
         vector<vector<int>> dist(H, vector<int>(W, intM));
         queue<tuple<int, int, int>> q;
-        dist[sh][sw] = 0;
-        q.push({0, sh, sw});
+        dist[si][sj] = 0;
+        q.push({0, si, sj});
         while (!q.empty())
         {
             auto [w, nowH, nowW] = q.front();
@@ -42,12 +42,12 @@ namespace UTLib
         return dist;
     }
 
-    vector<vector<int>> BFS2(const int H, const int W, const vector<string> &h, const vector<string> &v, const int sh, const int sw)
+    vector<vector<int>> BFS2(const int H, const int W, const vector<string> &h, const vector<string> &v, const int si, const int sj)
     {
         vector<vector<int>> dist(H, vector<int>(W, intM));
         queue<tuple<int, int, int>> q;
-        dist[sh][sw] = 0;
-        q.push({0, sh, sw});
+        dist[si][sj] = 0;
+        q.push({0, si, sj});
         while (!q.empty())
         {
             auto [w, nowH, nowW] = q.front();
