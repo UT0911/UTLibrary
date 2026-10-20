@@ -349,6 +349,8 @@ vector<ll> Dijkstra(const int N, const Graph &g, const int s)
     return dist;
 }
 
+// cout << fixed << setprecision(20) <<
+
 int main()
 {
     cin.tie(nullptr);
