@@ -7,14 +7,86 @@
     <title>ダイクストラ法</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <script defer type="text/javascript" src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
     <header><a href="../index.html" class="headerTitle">UTLibrary</a>
     </header>
     <h1>ダイクストラ法</h1>
-    <p>編集中</p>
+    <a class="sourcecode"
+        href="https://github.com/UT0911/UTLibrary/blob/main/UTLib/graph%2Cgrid/Dijkstra.hpp">Dijkstra.hpp</a>
+    <div>
+        <h2>addEdge(グラブの辺追加)</h2>
+        <p>Graph型(vector&lt;vector&lt;pair&lt;ll,int&gt;&gt;&gt;型)の \( Graph \) に頂点 \( u \) から頂点 \( v \) への重み \( w \)
+            の辺を追加します。
+        </p>
+
+        <h3>制約</h3>
+        <ul>
+            <li>\( Graph \) はGraph型</li>
+            <li>\( u,v \) はint型</li>
+            <li>\( w \) はll型</li>
+            <li>\( 1 \leq u,v \leq N-1 \) ( \( N \) はグラフの頂点数( \( 0 \) から))</li>
+        </ul>
+
+        <h3>計算量</h3>
+        <p>\( O(1) \)</p>
+
+        <h3>仕様</h3>
+        <h4>入力</h4>
+        <ul>
+            <li>辺を追加したいグラフ \( Graph \)</li>
+            <li>辺の始点の頂点番号 \( u \)</li>
+            <li>辺の終点の頂点番号 \( v \)</li>
+            <li>辺の重み \( w \)</li>
+        </ul>
+        <h4>出力(返り値)</h4>
+        <ul>
+            <li>無し</li>
+        </ul>
+
+        <h4>注意</h4>
+        <ul>
+            <li>特になし</li>
+        </ul>
+    </div>
+    <hr>
+
+    <div>
+        <h2>Dijkstra(ダイクストラ法)</h2>
+        <p>辺の状態が \( Graph \) で表されている頂点数 \( N \) のグラフの頂点 \( s \) から各頂点までの最小の重みを求めます。
+        </p>
+
+        <h3>制約</h3>
+        <ul>
+            <li>\( N,s \) はint型</li>
+            <li>\( 1 \leq s \leq N \)</li>
+            <li>\( Graph \) はGraph型</li>
+        </ul>
+
+        <h3>計算量</h3>
+        <p>\( O((N+M)\log N) \) (\( M \) は辺の数)</p>
+
+        <h3>仕様</h3>
+        <h4>入力</h4>
+        <ul>
+            <li>頂点数 \( N \)</li>
+            <li>グラフに接続されている辺を表す \( Graph \)</li>
+            <li>始点の頂点番号 \( s \)</li>
+        </ul>
+        <h4>出力(返り値)</h4>
+        <ul>
+            <li>始点の頂点から各頂点までの最小の重みを格納した長さ \( N+1 \) のll型一次元配列</li>
+        </ul>
+
+        <h4>注意</h4>
+        <ul>
+            <li>到達不可能なマスはll型の最大値が設定されます。</li>
+        </ul>
+    </div>
+
+
 </body>
 
 </html>

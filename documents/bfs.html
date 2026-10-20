@@ -14,7 +14,7 @@
     <header><a href="../index.html" class="headerTitle">UTLibrary</a>
     </header>
     <h1>BFS</h1>
-    <a class="sourcecode" href="https://github.com/UT0911/UTLibrary/blob/main/UTLib/graph%2Cgrid/BFS.hpp">bfs.hpp</a>
+    <a class="sourcecode" href="https://github.com/UT0911/UTLibrary/blob/main/UTLib/graph%2Cgrid/BFS.hpp">BFS.hpp</a>
     <div>
         <h2>BFS(文字列が各マスに対応している場合)</h2>
         <p>盤面の大きさ \( H \times W \)、各マスが壁かどうかを表す文字列配列 \( S \) ( マス \( ( i , j ) \) が壁であれば \( S_{i,j} = \) <code>#</code>
@@ -44,13 +44,16 @@
             <li>始点が左から何番目かを表す \( sj \)</li>
         </ul>
         <h4>出力(返り値)</h4>
-        <p>始点から各マスまでの最短距離を格納した \( H \times W \) の二次元配列</p>
+        <ul>
+            <li>始点から各マスまでの最短距離を格納した \( H \times W \) のint型二次元配列</li>
+        </ul>
 
         <h4>注意</h4>
         <ul>
-            <li>到達不可能なマスはintの最大値が設定されます。</li>
+            <li>到達不可能なマスはint型の最大値が設定されます。</li>
         </ul>
     </div>
+    <hr>
 
     <div>
         <h2>BFS2(文字列がマス間に対応している場合)</h2>
@@ -87,11 +90,13 @@
             <li>始点が左から何番目かを表す \( sj \)</li>
         </ul>
         <h4>出力(返り値)</h4>
-        <p>始点から各マスまでの最短距離を格納した \( H \times W \) の二次元配列</p>
+        <ul>
+            <li>始点から各マスまでの最短距離を格納した \( H \times W \) のint型二次元配列</li>
+        </ul>
 
         <h4>注意</h4>
         <ul>
-            <li>到達不可能なマスはintの最大値が設定されます。</li>
+            <li>到達不可能なマスはint型の最大値が設定されます。</li>
         </ul>
     </div>
 
