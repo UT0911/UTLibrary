@@ -22,12 +22,12 @@ const int mod9 = 998244353;
 const int mod1 = 1000000007;
 const int intM = numeric_limits<int>::max();
 const ll llM = numeric_limits<ll>::max();
-string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-string abc = "abcdefghijklmnopqrstuvwxyz";
-vi dx = {0, 1, 0, -1};
-vi dy = {-1, 0, 1, 0};
-vi ddx = {-1, 0, 1, -1, 1, -1, 0, 1};
-vi ddy = {-1, -1, -1, 0, 0, 1, 1, 1};
+const string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const string abc = "abcdefghijklmnopqrstuvwxyz";
+const vi dx = {0, 1, 0, -1};
+const vi dy = {-1, 0, 1, 0};
+const vi ddx = {-1, 0, 1, -1, 1, -1, 0, 1};
+const vi ddy = {-1, -1, -1, 0, 0, 1, 1, 1};
 template <class T>
 using priority_queueR = priority_queue<T, vector<T>, greater<T>>;
 
